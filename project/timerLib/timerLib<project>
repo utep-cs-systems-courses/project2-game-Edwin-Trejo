@@ -1,0 +1,9 @@
+  /home/student/Documents/project2-game-Edwin-Trejo/project/timerLib:
+  total used in directory 20 available 16774856
+  drwxr-xr-x 1 student users  80 Oct 13 23:29 .
+  drwxr-xr-x 1 student users  56 Oct 13 23:21 ..
+* -rw-r--r-- 1 student users 137 Oct 13 23:26 clocksTimer.h
+* -rw-r--r-- 1 student users 194 Oct 13 23:24 libTimer.h
+* -rw-r--r-- 1 student users 382 Oct 13 23:25 Makefile
+* -rw-r--r-- 1 student users 146 Oct 13 23:28 sr.h
+  -rw-r--r-- 1 student users 147 Oct 13 23:25 sr.h~
