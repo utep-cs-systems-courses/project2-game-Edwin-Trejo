@@ -1,26 +1,30 @@
 all: libTimer.a
 
-cpu             = MSP430G2553
-cflags          = -MMCU=${cpu}
+
+CPU             = msp430g2553
+CFLAGS          = -mmcu=${CPU}
 
 
 
-#SWITCH THE COMPILER (FOR THE INTERNAL MAKE RULES)
-cc              = MSP430-ELF-GCC
-as              = MSP430-ELF-AS
-ar              = MSP430-ELF-AR
-
-
-LIBtIMER.A: CLOCKStIMER.O SR.O
-	$(ar) CRS $@ $^
+#switch the compiler (for the internal make rules)
+CC              = msp430-elf-gcc
+AS              = msp430-elf-as
+AR              = msp430-elf-ar
 
 
 
-INSTALL: LIBtIMER.A
-	MKDIR -P ../H ../LIB
-	MV $^ ../LIB
-	CP *.H ../H
+libTimer.a: clocksTimer.o sr.o
+	$(AR) crs $@ $^
 
 
-CLEAN:
-	RM -F TIMERlIB.A *.O
+
+install: libTimer.a
+	mkdir -p ../h ../lib
+	mv $^ ../lib
+	cp *.h ../h
+
+
+
+clean:
+	rm -f timerLib.a *.o
+
